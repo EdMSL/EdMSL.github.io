@@ -4,13 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>My personal page</title>
 </head>
 <body>
-  Hello, World!
-  <a href="https://edmsl-compilation.000webhostapp.com/Gllacy/index.html" target="_blank">Gllacy</a>
-  <a href="https://edmsl-compilation.000webhostapp.com/Pink/index.html" target="_blank">Pink</a>
-  <a href="https://edmsl-compilation.000webhostapp.com/Keksobooking/index.html" target="_blank">Keksobooking</a>
-  <a href="https://edmsl-compilation.000webhostapp.com/Calculator/index.html" target="_blank">Calculator</a>
+  <header>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#greeting">Приветствие</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#skills">Навыки</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#portfolio">Порфолио</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="greeting">
+      <h2 class="visually-hidden" id="greeting">Приветствие</h2>
+      <div class="greeting__container">
+        <p class="greeting__text">Hello, World!</p>
+        <p class="greeting__text">Меня зовут Эдуард и это моя скромная персональная страница.</p>
+        <p class="greeting__text">Я начинающий Front-End разработчик. Моя цель - стать Senior Front-End разработчиком в течение пяти лет.</p>
+        <div class="greeting__timer timer">
+          <p class="timer__text">Времени осталось:</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 class="visually-hidden" id="skills">Навыки</h2>
+      <div class="skills__container">
+        <div class="skills__block">
+          <p class="skiils__title">Я могу:</p>
+          <ul class="skills__main-list">
+            <li class="skills__item">Писать валидную, семантичную разметку.</li>
+            <li class="skills__item">Верстать кроссбраузерно и адаптивно.</li>
+            <li class="skills__item">Программировать интерфейсы с помощью JS.</li>
+          </ul>
+        </div>
+        <div class="skills__block">
+          <p class="skiils__title">Я использую:</p>
+          <ul class="skills__tools-list">
+            <li class="skills__item">БЭМ-методологию в верстке.</li>
+            <li class="skills__item">Css-препроцессор Sass.</li>
+            <li class="skills__item">Сборщик Gulp.</li>
+            <li class="skills__item">Систему управления версиями Git.</li>
+          </ul>
+        </div>
+        <div class="skills__block">
+          <p class="skiils__title">Я планирую изучить:</p>
+          <ul class="skills__learn-list">
+            <li class="skills__item">JS ES6+</li>
+            <li class="skills__item">JS-фреймворк React или Vue.js</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio">
+      <h2 class="visually-hidden" id="portfolio">Портфолио</h2>
+      <div class="portfolio__container">
+        <div class="portfolio__block">
+          <div class="portfolio__image-block">
+            <img src="img/gllacy.jpg" alt="Изображение главной страницы сайта Gllacy" width="200" height="auto">
+          </div>
+          <a class="portfolio__link" href="https://edmsl-compilation.000webhostapp.com/Gllacy/index.html" target="_blank">Gllacy</a>
+          <p>Первый учебный проект. Интернет-магазин мороженого.</p>
+        </div>
+        <div class="portfolio__block">
+          <div class="portfolio__image-block">
+            <img src="img/pink.jpg" alt="Изображение главной страницы сайта Pink" width="200" height="auto">
+          </div>
+          <a class="portfolio__link" href="https://edmsl-compilation.000webhostapp.com/Pink/index.html" target="_blank">Pink</a>
+          <p>Учебный проект. Сайт мобильного приложения Pink.</p>
+        </div>
+        <div class="portfolio__block">
+          <div class="portfolio__image-block">
+            <img src="img/keksobooking.jpg" alt="Изображение главной страницы сайта Keksobooking" width="200" height="auto">
+          </div>
+          <a class="portfolio__link" href="https://edmsl-compilation.000webhostapp.com/Keksobooking/index.html" target="_blank">Keksobooking</a>
+          <p>Учебный проект. Сервис размещения и поиска жилья.</p>
+        </div>
+        <div class="portfolio__block">
+          <div class="portfolio__image-block">
+            <img src="#" alt="Изображение главной страницы сайта Calculator" width="200" height="auto">
+          </div>
+          <a class="portfolio__link" href="https://edmsl-compilation.000webhostapp.com/Calculator/index.html" target="_blank">Calculator</a>
+          <p>Самостоятельный проект. Простой калькулятор.</p>
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <h2 class="visually-hidden" id="contacts">Контакты</h2>
+      <div class="contacts__container">
+        <ul class="contacts__list">
+          <li class="contacts__item"><a class="contacts__link" href="#">Вк</a></li>
+          <li class="contacts__item"><a class="contacts__link" href="#">GitHub</a></li>
+          <li class="contacts__item"><a class="contacts__link" href="#">LinkedIn</a></li>
+          <li class="contacts__item"><a class="contacts__link" href="#">Email</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
