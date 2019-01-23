@@ -1,3 +1,53 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #323232;
+}
+
+a {
+  color: #323232;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .visually-hidden:not(:focus),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -14,4 +64,136 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.header-top {
+  min-height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {
+  position: relative;
+}
+
+.main-nav--no-js .main-nav__toggle {
+  display: none;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -35px;
+  right: 20px;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  width: 30px;
+  height: 18px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.main-nav--close .main-nav__toggle::before{
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 30px;
+  height: 4px;
+
+  background-color: #323232;
+  box-shadow: 0 7px 0 0 #323232, 0 14px 0 0 #323232;
+}
+
+.main-nav--close .main-nav__list{
+  display: none;
+}
+
+.main-nav--open .main-nav__list{
+  display: block;
+}
+
+
+.main-nav .main-nav__toggle {
+
+}
+
+.main-nav--open .main-nav__toggle::before,
+.main-nav--open .main-nav__toggle::after {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  left: 0;
+
+  width: 30px;
+  height: 4px;
+
+  background-color: #323232;
+}
+
+.main-nav--open .main-nav__toggle::before {
+  transform: rotate(45deg);
+}
+
+.main-nav--open .main-nav__toggle::after {
+  transform: rotate(-45deg);
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__item {
+  text-align: center;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 5px;
+
+  border-bottom: 2px solid #323232;
+  background-color: rgb(247, 75, 75);
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus {
+  background-color: rgb(243, 43, 43);
+}
+
+.main-nav__link:active {
+  background-color: rgb(165, 29, 29);
+}
+
+/* Greeting section*/
+
+.greeting__container {
+  padding: 0 5px;
+  text-align: center;
+}
+
+/*Skills section*/
+
+.skills {
+  padding: 0 5px;
+}
+
+.skills__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }

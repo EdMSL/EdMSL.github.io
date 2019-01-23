@@ -9,8 +9,14 @@
   <title>My personal page</title>
 </head>
 <body>
-  <header>
-    <nav class="main-nav">
+  <header class="header">
+    <div class="header-top">
+      <!-- <p>Меню</p> -->
+    </div>
+    <nav class="main-nav main-nav--open main-nav--no-js">
+      <button class="main-nav__toggle">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="#greeting">Приветствие</a>
@@ -31,7 +37,7 @@
     <section class="greeting">
       <h2 class="visually-hidden" id="greeting">Приветствие</h2>
       <div class="greeting__container">
-        <p class="greeting__text">Hello, World!</p>
+        <p class="greeting__title">Hello, World!</p>
         <p class="greeting__text">Меня зовут Эдуард и это моя скромная персональная страница.</p>
         <p class="greeting__text">Я начинающий Front-End разработчик. Моя цель - стать Senior Front-End разработчиком в течение пяти лет.</p>
         <div class="greeting__timer timer">
@@ -39,12 +45,12 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="skills">
       <h2 class="visually-hidden" id="skills">Навыки</h2>
       <div class="skills__container">
         <div class="skills__block">
           <p class="skiils__title">Я могу:</p>
-          <ul class="skills__main-list">
+          <ul class="skills__list skills__main-list">
             <li class="skills__item">Писать валидную, семантичную разметку.</li>
             <li class="skills__item">Верстать кроссбраузерно и адаптивно.</li>
             <li class="skills__item">Программировать интерфейсы с помощью JS.</li>
@@ -52,7 +58,7 @@
         </div>
         <div class="skills__block">
           <p class="skiils__title">Я использую:</p>
-          <ul class="skills__tools-list">
+          <ul class="skills__list skills__tools-list">
             <li class="skills__item">БЭМ-методологию в верстке.</li>
             <li class="skills__item">Css-препроцессор Sass.</li>
             <li class="skills__item">Сборщик Gulp.</li>
@@ -61,7 +67,7 @@
         </div>
         <div class="skills__block">
           <p class="skiils__title">Я планирую изучить:</p>
-          <ul class="skills__learn-list">
+          <ul class="skills__list skills__learn-list">
             <li class="skills__item">JS ES6+</li>
             <li class="skills__item">JS-фреймворк React или Vue.js</li>
           </ul>
@@ -71,32 +77,41 @@
     <section class="portfolio">
       <h2 class="visually-hidden" id="portfolio">Портфолио</h2>
       <div class="portfolio__container">
+        <p class="portfolio__title">Мои работы:</p>
         <div class="portfolio__block">
           <div class="portfolio__image-block">
-            <img src="img/gllacy.jpg" alt="Изображение главной страницы сайта Gllacy" width="200" height="auto">
+            <a class="portfolio__link" href="https://edmsl-compilation.000webhostapp.com/Gllacy/index.html" target="_blank">
+              <span class="visually-hidden">Сайт Gllacy</span>
+              <img src="img/gllacy.jpg" alt="Изображение главной страницы сайта Gllacy" width="200" height="auto">
+            </a>
           </div>
-          <a class="portfolio__link" href="https://edmsl-compilation.000webhostapp.com/Gllacy/index.html" target="_blank">Gllacy</a>
           <p>Первый учебный проект. Интернет-магазин мороженого.</p>
         </div>
         <div class="portfolio__block">
           <div class="portfolio__image-block">
-            <img src="img/pink.jpg" alt="Изображение главной страницы сайта Pink" width="200" height="auto">
+            <a class="portfolio__link" href="https://edmsl-compilation.000webhostapp.com/Pink/index.html" target="_blank">
+              <span class="visually-hidden">Сайт Pink</span>
+              <img src="img/pink.jpg" alt="Изображение главной страницы сайта Pink" width="200" height="auto">
+            </a>
           </div>
-          <a class="portfolio__link" href="https://edmsl-compilation.000webhostapp.com/Pink/index.html" target="_blank">Pink</a>
           <p>Учебный проект. Сайт мобильного приложения Pink.</p>
         </div>
         <div class="portfolio__block">
           <div class="portfolio__image-block">
-            <img src="img/keksobooking.jpg" alt="Изображение главной страницы сайта Keksobooking" width="200" height="auto">
+            <a class="portfolio__link" href="https://edmsl-compilation.000webhostapp.com/Keksobooking/index.html" target="_blank">
+              <span class="visually-hidden">Сайт Keksobooking</span>
+              <img src="img/keksobooking.jpg" alt="Изображение главной страницы сайта Keksobooking" width="200" height="auto">
+            </a>
           </div>
-          <a class="portfolio__link" href="https://edmsl-compilation.000webhostapp.com/Keksobooking/index.html" target="_blank">Keksobooking</a>
           <p>Учебный проект. Сервис размещения и поиска жилья.</p>
         </div>
         <div class="portfolio__block">
           <div class="portfolio__image-block">
-            <img src="#" alt="Изображение главной страницы сайта Calculator" width="200" height="auto">
+            <a class="portfolio__link" href="https://edmsl-compilation.000webhostapp.com/Calculator/index.html" target="_blank">
+              <span class="visually-hidden">Сайт Calculator</span>
+              <img src="#" alt="Изображение главной страницы сайта Calculator" width="200" height="auto">
+            </a>
           </div>
-          <a class="portfolio__link" href="https://edmsl-compilation.000webhostapp.com/Calculator/index.html" target="_blank">Calculator</a>
           <p>Самостоятельный проект. Простой калькулятор.</p>
         </div>
       </div>
@@ -113,5 +128,6 @@
       </div>
     </section>
   </main>
+  <script src="js/main.js"></script>
 </body>
 </html>
