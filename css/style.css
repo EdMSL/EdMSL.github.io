@@ -66,10 +66,44 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.main-wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.body--dark__theme {
+  color: #ececec;
+  background-color: #262626;
+}
+
 .header-top {
+  position: relative;
+
   min-height: 50px;
   margin: 0;
   padding: 0;
+}
+
+.header-top__theme-toggler {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  width: 30px;
+  height: 18px;
+
+  font-size: 0;
+
+  background-color: #323232;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
 }
 
 .main-nav {
@@ -123,11 +157,6 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
-
-.main-nav .main-nav__toggle {
-
-}
-
 .main-nav--open .main-nav__toggle::before,
 .main-nav--open .main-nav__toggle::after {
   content: "";
@@ -166,7 +195,7 @@ input[type="radio"].visually-hidden {
   padding: 5px;
 
   border-bottom: 2px solid #323232;
-  background-color: rgb(247, 75, 75);
+  background-color: transparent;
 }
 
 .main-nav__link:hover,
@@ -181,7 +210,7 @@ input[type="radio"].visually-hidden {
 /* Greeting section*/
 
 .greeting__container {
-  padding: 0 5px;
+  /* padding: 0 5px; */
   text-align: center;
 }
 
