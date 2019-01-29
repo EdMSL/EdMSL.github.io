@@ -77,6 +77,8 @@ input[type="radio"].visually-hidden {
   background-color: #262626;
 }
 
+/* Header section*/
+
 .header-top {
   position: relative;
 
@@ -212,6 +214,19 @@ input[type="radio"].visually-hidden {
 .greeting__container {
   /* padding: 0 5px; */
   text-align: center;
+}
+
+.timer__clock {
+  display: flex;
+  justify-content: center;
+}
+
+.timer__time-block {
+  margin-right: 20px;
+}
+
+.timer__time-block:last-child {
+  margin-right: 0;
 }
 
 /*Skills section*/
