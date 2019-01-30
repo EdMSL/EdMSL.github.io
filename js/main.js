@@ -6,7 +6,7 @@
   var MIN_IN_HOUR = 60;
   var HOUR_IN_DAY = 24;
 
-  var body = document.body;
+  var bodyWrap = document.querySelector('.body-wrap');
   var themeToggler = document.querySelector('.header-top__theme-toggler');
   var menuToggler = document.querySelector('.main-nav__toggle');
   var mainNav = document.querySelector('.main-nav');
@@ -43,9 +43,9 @@
     var totalTime = new Date(2023, 7, 6) - now;
     var total = getTotalTime(totalTime);
     daysBlock.textContent = total.day;
-    hoursBlock.textContent = total.hour;
-    minutesBlock.textContent = total.min;
-    secondsBlock.textContent = total.sec;
+    hoursBlock.textContent = getValue(total.hour);
+    minutesBlock.textContent = getValue(total.min);
+    secondsBlock.textContent = getValue(total.sec);
   }
 
   function startTimer(endTime) {
@@ -58,9 +58,16 @@
     }, 1000);
   }
 
+  function getValue(value) {
+    if (+value < 10) {
+      return value = '0' + value;
+    }
+    return value;
+  }
+
   themeToggler.addEventListener('click', function (evt) {
     evt.preventDefault();
-    body.classList.toggle('body--dark__theme');
+    bodyWrap.classList.toggle('body--dark__theme');
   });
 
   menuToggler.addEventListener('click', function (evt) {
