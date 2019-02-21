@@ -96,15 +96,20 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
 
-  width: 30px;
-  height: 18px;
+  width: 25px;
+  height: 25px;
 
   font-size: 0;
 
-  background-color: #323232;
+  background-color: transparent;
+  background-image: url(../img/day.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 25px auto;
   border: none;
   outline: none;
 
+  transition: all 0.2s linear;
   cursor: pointer;
 }
 
@@ -212,7 +217,9 @@ input[type="radio"].visually-hidden {
 }
 
 .body--dark__theme .header-top__theme-toggler {
-  background-color: #ececec;
+  background-image: url(../img/night.svg);
+
+  transform: rotate(180deg);
 }
 
 .body--dark__theme .main-nav--close .main-nav__toggle::before {
@@ -229,6 +236,8 @@ input[type="radio"].visually-hidden {
 /* Greeting section*/
 
 .greeting__container {
+  margin-bottom: 20px;
+
   text-align: center;
 }
 
@@ -252,10 +261,10 @@ input[type="radio"].visually-hidden {
 .timer__clock {
   display: flex;
   justify-content: center;
+  max-width: 480px;
 }
 
 .timer__time-block {
-  max-width: 480px;
   margin-right: 20px;
 }
 
@@ -287,6 +296,13 @@ input[type="radio"].visually-hidden {
 
 .skills {
   padding: 0 5px;
+}
+
+.skills__title {
+  margin: 10px 0;
+  padding: 0;
+
+  font-weight: 700;
 }
 
 .skills__list {

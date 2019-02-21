@@ -48,10 +48,10 @@
     secondsBlock.textContent = getValue(total.sec);
   }
 
-  function startTimer(endTime) {
-    getTime(endTime);
+  function startTimer() {
+    getTime();
     timer = setInterval(function () {
-      getTime(endTime);
+      getTime();
       if (new Date === new Date(2023, 7, 6)) {
         clearInterval(timer);
       }
