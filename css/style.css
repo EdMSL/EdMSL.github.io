@@ -242,26 +242,51 @@ input[type="radio"].visually-hidden {
 }
 
 .greeting__title {
-  position: relative;
-
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
-  padding-top: 120px;
 
   font-size: 30px;
   height: 35px;
   font-weight: 700;
+}
+
+.greeting__avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
 
   background-image: url(../img/hello.svg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100px 100px;
+
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.greeting__img {
+  opacity: 0;
+
+  transition: opacity 0.2s linear;
+}
+
+.greeting__avatar:hover .greeting__img {
+  opacity: 1;
+}
+
+.timer__title {
+  margin-bottom: 10px;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
 }
 
 .timer__clock {
   display: flex;
   justify-content: center;
   max-width: 480px;
+  margin: 0 auto;
 }
 
 .timer__time-block {
@@ -274,11 +299,11 @@ input[type="radio"].visually-hidden {
 
 .timer__time {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1vmin;
   padding: 0;
 
-  font-size: 7vmin;
-  line-height: 8vmin;
+  font-size: 9vmin;
+  line-height: 11vmin;
   font-weight: 700;
 }
 
@@ -286,13 +311,13 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
 
-  font-size: 4vmin;
-  line-height: 5vmin;
+  font-size: 5vmin;
+  line-height: 6vmin;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-/*Skills section*/
+/* Skills section */
 
 .skills {
   padding: 0 5px;
@@ -310,4 +335,78 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   list-style: none;
+}
+
+.skills__img {
+  padding-right: 10px;
+}
+
+.skills__img svg {
+  fill: #67db50;
+}
+
+/* Portfolio section */
+
+.portfolio__container {
+  text-align: center;
+}
+
+.portfolio__title {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.portfolio__link {
+  display: block;
+}
+
+.portfolio__image {
+  margin: 0 auto;
+
+  box-shadow: 2px 2px 1px 0 rgba(17, 17, 17, 0.5);
+}
+
+.portfolio__block:hover .portfolio__image {
+  box-shadow: 10px 10px 10px 0 rgba(17, 17, 17, 0.5);
+
+  transform: translate(-2px, -2px);
+}
+
+.portfolio__block:hover .portfolio__description {
+  font-weight: 700;
+
+  transform: translate(-2px, -2px);
+}
+
+@media (min-width: 700px) {
+  .main-wrap {
+    max-width: 800px;
+  }
+  .timer__time {
+    margin-bottom: 10px;
+
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .timer__text {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+.skills__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.portfolio__block {
+  width: 300px;
 }
