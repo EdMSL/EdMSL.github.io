@@ -72,7 +72,8 @@ input[type="radio"].visually-hidden {
   padding: 0 5px;
 }
 
-.body--dark__theme {
+.body--dark__theme,
+.body--dark__theme a {
   color: #ececec;
   background-color: #262626;
 }
@@ -82,6 +83,7 @@ input[type="radio"].visually-hidden {
 .header-top {
   position: relative;
 
+  min-width: 50px;
   min-height: 50px;
   margin: 0;
   padding: 0;
@@ -379,10 +381,107 @@ input[type="radio"].visually-hidden {
   transform: translate(-2px, -2px);
 }
 
-@media (min-width: 700px) {
+/* Contacts section */
+
+.contacts__list {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.contacts__link {
+  position: relative;
+
+  margin-left: 30px;
+}
+
+.contacts__link::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.contacts__link--vk::before {
+  background-image: url(../img/vkontakte-logo.svg);
+}
+
+.contacts__link--gh::before {
+  background-image: url(../img/github-logo.svg);
+}
+
+.contacts__link--li::before {
+  background-image: url(../img/linkedin-logo.svg);
+}
+
+.contacts__link--gm::before {
+  background-image: url(../img/gmail-logo.svg);
+}
+
+.credits__title {
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.credits__block {
+  display: none;
+}
+
+.credits > input[type="checkbox"]:checked + .credits__block {
+  display: block;
+}
+
+.body--dark__theme .contacts__link--gh::before {
+  background-image: url(../img/github-white-logo.svg);
+}
+
+@media (min-width: 750px) {
   .main-wrap {
     max-width: 800px;
   }
+
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 800px;
+    min-height: 50px;
+    margin: 0 auto 20px;
+  }
+
+  .main-nav {
+    margin: 0 auto;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--close .main-nav__list,
+  .main-nav--open .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__item {
+    margin-right: 20px;
+  }
+
+  .main-nav__item:last-child {
+    margin-right: 0;
+  }
+
+  .main-nav__link {
+    border-bottom: none;
+  }
+
   .timer__time {
     margin-bottom: 10px;
 
@@ -394,19 +493,19 @@ input[type="radio"].visually-hidden {
     font-size: 25px;
     line-height: 35px;
   }
+  .skills__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .portfolio__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .portfolio__block {
+    width: 300px;
+  }
 }
 
-.skills__container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.portfolio__items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.portfolio__block {
-  width: 300px;
-}
