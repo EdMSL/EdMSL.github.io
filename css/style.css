@@ -368,8 +368,6 @@ input[type="radio"].visually-hidden {
 }
 
 .portfolio__container {
-  margin-bottom: 30px;
-
   text-align: center;
 }
 
@@ -411,13 +409,17 @@ input[type="radio"].visually-hidden {
 
 /* Contacts section */
 
+.contacts {
+  padding: 30px 0;
+}
+
 .contacts__list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   padding: 0;
 
   list-style: none;
@@ -431,6 +433,10 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   margin-left: 30px;
+}
+
+.contacts__item:hover {
+  transform: translate(-2px, -2px);
 }
 
 .contacts__link::before {
@@ -466,6 +472,10 @@ input[type="radio"].visually-hidden {
 
 .contacts__link--tg::before {
   background-image: url(../img/telegram-logo.svg);
+}
+
+.contacts__credits {
+  text-align: center;
 }
 
 .credits__title {
