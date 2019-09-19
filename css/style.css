@@ -337,6 +337,12 @@ input[type="radio"].visually-hidden {
   padding: 10px 5px 20px;
 }
 
+.skills__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .skills__title {
   margin: 0;
   margin-bottom: 10px;
@@ -350,6 +356,10 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   list-style: none;
+}
+
+.skills__item {
+  padding-left: 20px;
 }
 
 .skills__img {
@@ -635,10 +645,6 @@ input[type="radio"].visually-hidden {
   .timer__text {
     font-size: 25px;
     line-height: 35px;
-  }
-  .skills__container {
-    display: flex;
-    justify-content: space-between;
   }
 
   .portfolio__items {
