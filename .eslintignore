@@ -1,7 +1,0 @@
-# Ignore built files except build/index.js
-2019/*
-build/*
-config/webpack/*
-config/webpack.base.config.js
-config/webpack.build.config.js
-config/webpack.dev.config.js

@@ -1,7 +1,0 @@
-{
-  "path-intellisense.autoSlashAfterDirectory": false,
-  "path-intellisense.mappings": {
-      "~$root": "${workspaceRoot}/src",
-      "~$images": "${workspaceRoot}/src/images",
-  },
-}
