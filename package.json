@@ -1,7 +1,7 @@
 {
-  "name": "my-basic-boilerplate",
+  "name": "personal-page",
   "version": "1.0.0",
-  "description": "My basic boilerplate",
+  "description": "My personal page",
   "main": "index.js",
   "author": "Eduard Trayt <eduard2011rus@gmail.com> (https://github.com/EdMSL)",
   "repository": {
