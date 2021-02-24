@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const fonts = require('./webpack/rules/fonts');
 const copyImages = require('./webpack/plugins/copy-images');
 const generateHtmlPlugins = require('./webpack/plugins/html-webpack-plugin');
@@ -12,7 +12,7 @@ const PATHS = {
 };
 
 const plugins = [
-  new webpack.WatchIgnorePlugin(['build']),
+  new webpack.WatchIgnorePlugin({ paths: ['build']}),
   ...generateHtmlPlugins(`${PATHS.src}/html`),
   copyImages(`${PATHS.src}/images/content`),
 ];
@@ -38,15 +38,6 @@ const configuration = merge([
       },
       extensions: ['.js'],
       descriptionFiles: ['package.json'],
-    },
-    stats: {
-      all: false,
-      modules: true,
-      maxModules: 0,
-      errors: true,
-      warnings: true,
-      moduleTrace: true,
-      errorDetails: true,
     },
     plugins,
   },

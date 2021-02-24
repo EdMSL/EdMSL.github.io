@@ -5,9 +5,6 @@ module.exports = {
   plugins: [
     'stylelint-order',
     'stylelint-scss',
-    'stylelint-at-rule-no-children',
-    'stylelint-color-format',
-    'stylelint-declaration-use-variable',
   ],
   ignoreFiles: [
     'build/**/*'
@@ -68,21 +65,6 @@ module.exports = {
     'selector-max-compound-selectors': 2,
     'selector-max-universal': 1,
     'value-keyword-case': 'lower', // --fix
-    'aditayvm/at-rule-no-children': true,
-    'color-format/format': { // --fix
-      'format': 'rgb',
-    },
-    'sh-waqar/declaration-use-variable': [[
-      'color',
-      'background-color',
-      {
-        ignoreValues: [
-          'transparent',
-          'inherit',
-          '/-func/',
-        ],
-      },
-    ]],
     'scss/dollar-variable-colon-newline-after': 'always-multi-line', // --fix
     'scss/at-function-named-arguments': ['always', {
       'ignore': ['single-argument'],
