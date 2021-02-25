@@ -15,8 +15,10 @@ const devWebpackConfig = merge([
   {
     mode: 'development',
     devtool: 'eval-cheap-source-map',
+    target: 'web', // https://github.com/webpack/webpack-dev-server/issues/2758
     watchOptions: {
-      ignored: /node_modules/,
+      poll: true,
+      ignored: "/node_modules/"
     },
     plugins,
   },

@@ -6,6 +6,7 @@ html {
 body {
   @include main-text;
   @include reset-indents;
+  height: 100%;
 }
 
 *,
@@ -52,6 +53,12 @@ input[type="radio"].visually-hidden {
 .body--dark__theme,
 .body--dark__theme a {
   color: #ececec;
+}
+
+.body-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .main-wrap {
