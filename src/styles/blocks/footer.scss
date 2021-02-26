@@ -1,0 +1,103 @@
+.footer {
+  margin-top: auto;
+}
+
+.contacts {
+  padding: 30px 0;
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.contacts__item {
+  margin-bottom: 10px;
+
+  &:hover {
+    transform: translate(-2px, -2px);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__link {
+  position: relative;
+
+  margin-left: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+  }
+}
+
+.contacts__link--vk::before {
+  background-image: url("../images/decoration/vkontakte-logo.svg");
+}
+
+.contacts__link--gh::before {
+  background-image: url("../images/decoration/github-logo.svg");
+
+  .body-wrap--dark__theme & {
+    background-image: url("../images/decoration/github-white-logo.svg");
+  }
+}
+
+.contacts__link--li::before {
+  background-image: url("../images/decoration/linkedin-logo.svg");
+}
+
+.contacts__link--gm::before {
+  background-image: url("../images/decoration/gmail-logo.svg");
+}
+
+.contacts__link--sk::before {
+  background-image: url("../images/decoration/skype-logo.svg");
+}
+
+.contacts__link--tg::before {
+  background-image: url("../images/decoration/telegram-logo.svg");
+}
+
+.contacts__credits {
+  text-align: center;
+}
+
+.credits__title {
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.credits__block {
+  display: none;
+}
+
+.credits > input[type="checkbox"]:checked + .credits__block {
+  display: block;
+}

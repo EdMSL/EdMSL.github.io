@@ -4,6 +4,7 @@ const { merge } = require('webpack-merge');
 const fonts = require('./webpack/rules/fonts');
 const copyImages = require('./webpack/plugins/copy-images');
 const generateHtmlPlugins = require('./webpack/plugins/html-webpack-plugin');
+const handlebars = require('./webpack/rules/handlebars');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -13,6 +14,11 @@ const PATHS = {
 
 const plugins = [
   new webpack.WatchIgnorePlugin({ paths: ['build']}),
+  new webpack.LoaderOptionsPlugin({
+    options: {
+      handlebarsLoader: {}
+    }
+  }),
   ...generateHtmlPlugins(`${PATHS.src}/html`),
   copyImages(`${PATHS.src}/images/content`),
 ];
@@ -42,6 +48,7 @@ const configuration = merge([
     plugins,
   },
   fonts(),
+  handlebars(PATHS.src, `${PATHS.src}/helpers`),
 ]);
 
 module.exports = configuration;

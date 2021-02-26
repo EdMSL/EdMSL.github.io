@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -9,7 +10,7 @@ module.exports = function (assetsDir) {
     const name = fileData[0];
     const ext = fileData[1];
 
-    if (ext !== 'html') {
+    if (ext !== 'handlebars') {
       return false;
     }
 

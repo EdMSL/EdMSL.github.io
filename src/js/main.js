@@ -20,7 +20,7 @@
 
   themeToggler.addEventListener('click', function (evt) {
     evt.preventDefault();
-    bodyWrap.classList.toggle('body--dark__theme');
+    bodyWrap.classList.toggle('body-wrap--dark__theme');
   });
 
   menuToggler.addEventListener('click', function (evt) {

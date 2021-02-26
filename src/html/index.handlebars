@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="preload" href="fonts/opensans.woff" as="font">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <title>Portfolio site</title>
+    {{#if (isdefined htmlWebpackPlugin.options.inject)}}<link rel="stylesheet" href="css/styles.css">{{/if}}
+  </head>
+
+  <body>
+    <div class="body-wrap"> <!--нужен для возможности смены фона страницы, смена фона на body в IE не работает-->
+      {{> partials/header title=htmlWebpackPlugin.options.title}}
+
+      <main class="main">
+        <section class="greeting">
+          <div class="main-wrap">
+            <h2 class="visually-hidden" id="greeting">Приветствие</h2>
+            <div class="greeting__container">
+              <p class="greeting__title">Hello, World!</p>
+              <p class="greeting__avatar">
+                <img class="greeting__img" src="images/content/avatar.jpg" alt="Фото Эдуарда" width="100" height="100">
+              </p>
+              <p class="greeting__text">Меня зовут Эдуард и это моя скромная персональная страница.</p>
+            </div>
+          </div>
+        </section>
+        <section class="skills">
+          <div class="main-wrap">
+            <h2 class="visually-hidden" id="skills">Навыки</h2>
+            <div class="skills__container">
+              <p class="skills__title">Стек технологий:</p>
+                <ul class="skills__list skills__main-list">
+                  <li class="skills__item"><span class="skills__img"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17" height="17" viewBox="0 0 70 70">
+                    <path d="M26.474,70c-2.176,0-4.234-1.018-5.557-2.764L3.049,43.639C0.725,40.57,1.33,36.2,4.399,33.875
+                      c3.074-2.326,7.441-1.717,9.766,1.35l11.752,15.518L55.474,3.285c2.035-3.265,6.332-4.264,9.604-2.232
+                      c3.268,2.034,4.266,6.334,2.23,9.602l-34.916,56.06c-1.213,1.949-3.307,3.175-5.6,3.279C26.685,69.998,26.58,70,26.474,70z"/>
+                  </svg></span>Unity</li>
+                </ul>
+            </div>
+          </div>
+        </section>
+        <section class="portfolio">
+          <div class="main-wrap">
+            <h2 class="visually-hidden" id="portfolio">Портфолио</h2>
+            <div class="games__container">
+              <p class="games__title">Мои игры:</p>
+              <div class="games__items">
+                {{> partials/gameCard gameName="Jack's Journey" gameNameInHTML="JacksJourney"}}
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {{> partials/footer title="Контакты"}}
+    </div>
+    {{#if (isdefined htmlWebpackPlugin.options.inject)}}<script src="js/index.js"></script>{{/if}}
+  </body>
+</html>

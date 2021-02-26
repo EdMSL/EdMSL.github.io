@@ -1,0 +1,19 @@
+$card-shadow: rgba(17, 17, 17, 0.5);
+
+.game__image {
+  margin: 0 auto;
+
+  box-shadow: 2px 2px 1px 0 $card-shadow;
+
+  .game__card:hover & {
+    box-shadow: 10px 10px 10px 0 $card-shadow;
+
+    transform: translate(-2px, -2px);
+  }
+}
+
+.game__card:hover .game__description {
+  font-weight: 700;
+
+  transform: translate(-2px, -2px);
+}
