@@ -1,5 +1,9 @@
 .footer {
   margin-top: auto;
+
+  .body-wrap--dark__theme & {
+    background-color: $bg-dark-color;
+  }
 }
 
 .contacts {
