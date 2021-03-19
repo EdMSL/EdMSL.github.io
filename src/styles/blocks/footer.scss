@@ -1,9 +1,9 @@
 .footer {
   margin-top: auto;
 
-  .body-wrap--dark__theme & {
-    background-color: $bg-dark-color;
-  }
+  color: var(--text-main-color);
+
+  background-color: var(--bg-color);
 }
 
 .contacts {

@@ -1,8 +1,9 @@
 @import "node_modules/normalize-scss/sass/normalize/import-now";
+@import "./base/theme.scss";
 @import "./base/fonts.scss";
 @import "./base/global.scss";
 @import "./base/common.scss";
-@import "./blocks/block.scss";
 @import "./blocks/header.scss";
-@import "./blocks/footer.scss";
+@import "./blocks/main.scss";
 @import "./blocks/gameCard.scss";
+@import "./blocks/footer.scss";

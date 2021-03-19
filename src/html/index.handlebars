@@ -22,22 +22,48 @@
   </head>
 
   <body>
-    <div class="body-wrap"> <!--нужен для возможности смены фона страницы, смена фона на body в IE не работает-->
+    <div class="body-wrap">
       {{> partials/header title=htmlWebpackPlugin.options.title}}
 
       <main class="main">
-        <section class="greeting">
-          <div class="main-wrap">
-            <h2 class="visually-hidden" id="greeting">Приветствие</h2>
+        <section class="greeting" id="greeting">
+          {{!-- <div class="main-wrap"> --}}
+            <h2 class="visually-hidden">Приветствие</h2>
             <div class="greeting__container">
               <p class="greeting__title">Hello, World!</p>
+              <p class="greeting__text">Меня зовут Эдуард.</p>
               <p class="greeting__avatar">
                 <img class="greeting__img" src="images/content/avatar.jpg" alt="Фото Эдуарда" width="100" height="100">
               </p>
-              <p class="greeting__text">Меня зовут Эдуард и это моя скромная персональная страница.</p>
+              <p class="greeting__text">Это моя скромная персональная страница.</p>
             </div>
-          </div>
+          {{!-- </div> --}}
         </section>
+
+        <section class="portfolio">
+          {{!-- <div class="main-wrap"> --}}
+            <h2 class="visually-hidden" id="portfolio">Портфолио</h2>
+            <div class="games__container">
+              <p class="games__title">Мои игры:</p>
+              <div class="games__items">
+                {{> partials/gameCard gameName="Jack's Journey" gameNameInHTML="JacksJourney"}}
+                {{> partials/gameCard gameName="Feed the Animals" gameNameInHTML="FeedTheAnimals"}}
+                {{> partials/gameCard gameName="Sumo Battle" gameNameInHTML="SumoBattle"}}
+                {{> partials/gameCard gameName="Feed the Animals" gameNameInHTML="FeedTheAnimals"}}
+                {{> partials/gameCard gameName="Sumo Battle" gameNameInHTML="SumoBattle"}}
+                {{> partials/gameCard gameName="Feed the Animals" gameNameInHTML="FeedTheAnimals"}}
+                {{> partials/gameCard gameName="Sumo Battle" gameNameInHTML="SumoBattle"}}
+                {{> partials/gameCard gameName="Feed the Animals" gameNameInHTML="FeedTheAnimals"}}
+                {{> partials/gameCard gameName="Sumo Battle" gameNameInHTML="SumoBattle"}}
+                {{> partials/gameCard gameName="Feed the Animals" gameNameInHTML="FeedTheAnimals"}}
+                {{> partials/gameCard gameName="Sumo Battle" gameNameInHTML="SumoBattle"}}
+                {{> partials/gameCard gameName="Feed the Animals" gameNameInHTML="FeedTheAnimals"}}
+                {{> partials/gameCard gameName="Sumo Battle" gameNameInHTML="SumoBattle"}}
+              </div>
+            </div>
+          {{!-- </div> --}}
+        </section>
+
         <section class="skills">
           <div class="main-wrap">
             <h2 class="visually-hidden" id="skills">Навыки</h2>
@@ -50,19 +76,6 @@
                       c3.268,2.034,4.266,6.334,2.23,9.602l-34.916,56.06c-1.213,1.949-3.307,3.175-5.6,3.279C26.685,69.998,26.58,70,26.474,70z"/>
                   </svg></span>Unity</li>
                 </ul>
-            </div>
-          </div>
-        </section>
-        <section class="portfolio">
-          <div class="main-wrap">
-            <h2 class="visually-hidden" id="portfolio">Портфолио</h2>
-            <div class="games__container">
-              <p class="games__title">Мои игры:</p>
-              <div class="games__items">
-                {{!-- {{> partials/gameCard gameName="Jack's Journey" gameNameInHTML="JacksJourney"}} --}}
-                {{> partials/gameCard gameName="Feed the Animals" gameNameInHTML="FeedTheAnimals"}}
-                {{> partials/gameCard gameName="Sumo Battle" gameNameInHTML="SumoBattle"}}
-              </div>
             </div>
           </div>
         </section>

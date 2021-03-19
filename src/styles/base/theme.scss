@@ -1,0 +1,19 @@
+:root {
+  --mobile-width: 380px;
+}
+
+.theme {
+  &--color {
+    &--light {
+      --text-main-color: #{$default-dark};
+      --bg-color: #{$white};
+      --overlay-bg-color: #{$overlay-white};
+    }
+
+    &--dark {
+      --text-main-color: #{$default-light};
+      --bg-color: #{$black};
+      --overlay-bg-color: #{$overlay-black};
+    }
+  }
+}
