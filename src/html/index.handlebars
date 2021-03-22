@@ -27,24 +27,23 @@
 
       <main class="main">
         <section class="greeting" id="greeting">
-          {{!-- <div class="main-wrap"> --}}
-            <h2 class="visually-hidden">Приветствие</h2>
-            <div class="greeting__container">
-              <p class="greeting__title">Hello, World!</p>
-              <p class="greeting__text">Меня зовут Эдуард.</p>
-              <p class="greeting__avatar">
-                <img class="greeting__img" src="images/content/avatar.jpg" alt="Фото Эдуарда" width="100" height="100">
-              </p>
-              <p class="greeting__text">Это моя скромная персональная страница.</p>
-            </div>
-          {{!-- </div> --}}
+          <h2 class="visually-hidden">Приветствие</h2>
+          <div class="greeting__container">
+            <p class="greeting__title">Hello, World!</p>
+            <p class="greeting__text">Меня зовут Эдуард.</p>
+            <p class="greeting__avatar">
+              <img class="greeting__img" src="images/content/avatar.jpg" alt="Фото Эдуарда" width="100" height="100">
+            </p>
+            <p class="greeting__text">Я начинающий разработчик игр.</p>
+          </div>
+          <a class="greeting__btn" href='#portfolio'>К портфолио</a>
         </section>
 
         <section class="portfolio">
           {{!-- <div class="main-wrap"> --}}
             <h2 class="visually-hidden" id="portfolio">Портфолио</h2>
             <div class="games__container">
-              <p class="games__title">Мои игры:</p>
+              {{!-- <p class="games__title">Мои игры:</p> --}}
               <div class="games__items">
                 {{> partials/gameCard gameName="Block Breaker" gameNameInHTML="BlockBreaker"}}
                 {{> partials/gameCard gameName="Feed the Animals" gameNameInHTML="FeedTheAnimals"}}
