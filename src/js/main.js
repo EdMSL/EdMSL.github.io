@@ -1,23 +1,15 @@
 'use strict';
 
 (function () {
-  var bodyWrap = document.querySelector('.body-wrap');
-  var themeToggler = document.querySelector('.header-top__theme-toggler');
-  var menuToggler = document.querySelector('.main-nav__toggle');
-  var theme = localStorage.getItem('theme');
-  var header = document.querySelector('.header');
+  const bodyWrap = document.querySelector('.body-wrap');
+  const themeToggler = document.querySelector('.header-top__theme-toggler');
+  const menuToggler = document.querySelector('.main-nav__toggle');
+  let theme = localStorage.getItem('theme');
+  const header = document.querySelector('.header');
 
-  var anchors = document.querySelectorAll('a[href*="#"]');
-
-  function setScrolledHeader() {
-    var headerBottomCoord = header.getBoundingClientRect().bottom + window.pageXOffset;
-
-    if (!header.classList.contains('header--scrolled') && window.pageYOffset > headerBottomCoord) {
-      header.classList.add('header--scrolled');
-    } else if (window.pageYOffset < headerBottomCoord) {
-      header.classList.remove('header--scrolled');
-    }
-  }
+  const anchors = document.querySelectorAll('a[href*="#"]');
+  const anchorsBlocksCoords = {};
+  const headerBottomCoord = header.getBoundingClientRect().bottom + window.scrollY;
 
   themeToggler.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -30,6 +22,7 @@
 
   menuToggler.addEventListener('click', function (evt) {
     evt.preventDefault();
+
     if (header.classList.contains('header--open')) {
       header.classList.remove('header--open');
       header.classList.add('header--close');
@@ -39,18 +32,31 @@
     }
   });
 
+  function setScrolledHeader() {
+    if (!header.classList.contains('header--scrolled') && window.pageYOffset > headerBottomCoord) {
+      header.classList.add('header--scrolled');
+    } else if (window.pageYOffset < headerBottomCoord) {
+      header.classList.remove('header--scrolled');
+    }
+  }
+
   window.addEventListener('scroll', setScrolledHeader);
 
   for (let anchor of anchors) {
+    let anchorName = anchor.getAttribute('href').substr(1);
+
     anchor.addEventListener('click', function (evt) {
       evt.preventDefault();
-      document.getElementById(anchor.getAttribute('href').substr(1)).scrollIntoView({
+      document.getElementById(anchorName).scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       });
     });
-  }
 
+    // var anchorBlock = document.getElementById(anchorName);
+
+    // anchorsBlocksCoords[anchorName] = anchorBlock.getBoundingClientRect().bottom + window.scrollY;
+  }
 
   header.classList.remove('header--open');
   header.classList.remove('header--no-js');

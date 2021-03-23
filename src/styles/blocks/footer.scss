@@ -31,7 +31,7 @@
   margin-bottom: 10px;
 
   &:hover {
-    transform: translate(-2px, -2px);
+    // transform: translate(-2px, -2px);
   }
 
   @media (min-width: $tablet-width) {
@@ -44,48 +44,13 @@
 
   margin-left: 30px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -30px;
-
-    display: block;
-    width: 20px;
-    height: 20px;
+  & svg {
+    fill: var(--text-main-color);
   }
 
   @media (min-width: $tablet-width) {
     margin-right: 20px;
   }
-}
-
-.contacts__link--vk::before {
-  background-image: url("../images/decoration/vkontakte-logo.svg");
-}
-
-.contacts__link--gh::before {
-  background-image: url("../images/decoration/github-logo.svg");
-
-  .body-wrap--dark__theme & {
-    background-image: url("../images/decoration/github-white-logo.svg");
-  }
-}
-
-.contacts__link--li::before {
-  background-image: url("../images/decoration/linkedin-logo.svg");
-}
-
-.contacts__link--gm::before {
-  background-image: url("../images/decoration/gmail-logo.svg");
-}
-
-.contacts__link--sk::before {
-  background-image: url("../images/decoration/skype-logo.svg");
-}
-
-.contacts__link--tg::before {
-  background-image: url("../images/decoration/telegram-logo.svg");
 }
 
 .contacts__credits {
@@ -100,6 +65,11 @@
 
 .credits__block {
   display: none;
+}
+
+.credits__link {
+  color: var(--text-main-color);
+  font-weight: 700;
 }
 
 .credits > input[type="checkbox"]:checked + .credits__block {

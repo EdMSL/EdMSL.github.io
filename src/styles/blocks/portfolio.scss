@@ -1,0 +1,66 @@
+.portfolio {
+  flex-grow: 1;
+
+  background-color: var(--bg-color);
+}
+
+.games__container {
+  // width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
+
+  text-align: center;
+}
+
+.games__title {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.games__items {
+  max-width: $max-content-width;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-gap: 5px;
+  }
+}
+
+.game__card {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.game__link {
+  display: block;
+}
+
+.game__image {
+  width: 100%;
+  margin: 0 auto;
+
+  .game__card:hover & {
+    outline: 2px solid $purple;
+    outline-offset: -2px;
+  }
+}
+
+.game__description {
+  color: var(--text-main-color);
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  .game__card:hover & {
+    color: $purple;
+  }
+}

@@ -27,10 +27,10 @@
 
   text-align: center;
 
-  @media (min-width: $tablet-width) {
-    margin-left: 10%;
-    padding-top: 80px;
-  }
+  // @media (min-width: $tablet-width) {
+  //   margin-left: 10%;
+  //   padding-top: 80px;
+  // }
 }
 
 .greeting__title {
@@ -49,22 +49,22 @@
   margin: 0 auto;
   overflow: hidden;
 
-  background-image: url("../images/decoration/hello.svg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100px 100px;
-
   border-radius: 50%;
 }
 
-.greeting__btn {
+.greeting-btn__container {
   position: absolute;
   bottom: 50px;
 
+  display: flex;
+  justify-content: center;
+}
+
+.greeting__btn {
   color: var(--text-main-color);
-  text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* Skills section */
@@ -106,45 +106,3 @@
   fill: #67db50;
 }
 /* Portfolio section */
-
-.portfolio {
-  flex-grow: 1;
-
-  background-color: var(--bg-color);
-}
-
-.games__container {
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 50px;
-
-  text-align: center;
-}
-
-.games__title {
-  margin: 0;
-  margin-bottom: 25px;
-  padding: 0;
-
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 700;
-}
-
-.games__items {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-.game__card {
-  @media (min-width: $tablet-width) {
-    width: 300px;
-  }
-}
-
-.game__link {
-  display: block;
-}
