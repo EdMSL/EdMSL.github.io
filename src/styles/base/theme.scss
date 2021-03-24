@@ -6,14 +6,20 @@
   &--color {
     &--light {
       --text-main-color: #{$default-dark};
+      --text-alternate-color: #{$default-light};
       --bg-color: #{$white};
+      --bg-image: url("../images/decoration/background.jpg");
       --overlay-bg-color: #{$overlay-white};
+      --main-theme-color: #{$purple};
     }
 
     &--dark {
       --text-main-color: #{$default-light};
+      --text-alternate-color: #{$default-dark};
       --bg-color: #{$black};
+      --bg-image: url("../images/decoration/background1.jpg");
       --overlay-bg-color: #{$overlay-black};
+      --main-theme-color: #{$purple};
     }
   }
 }

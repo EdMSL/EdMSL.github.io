@@ -26,20 +26,7 @@
       {{> partials/header title=htmlWebpackPlugin.options.title}}
 
       <main class="main">
-        <section class="greeting" id="greeting">
-          <h2 class="visually-hidden">Приветствие</h2>
-          <div class="greeting__container">
-            <p class="greeting__title">Hello, World!</p>
-            <p class="greeting__text">Меня зовут Эдуард.</p>
-            <p class="greeting__avatar">
-              <img class="greeting__img" src="images/content/avatar.jpg" alt="Фото Эдуарда" width="100" height="100">
-            </p>
-            <p class="greeting__text">Я начинающий разработчик игр.</p>
-          </div>
-          <div class="greeting-btn__container">
-            <a class="greeting__btn" href='#portfolio'>К портфолио</a>
-          </div>
-        </section>
+        {{> partials/greeting}}
 
         <section class="portfolio">
           {{!-- <div class="main-wrap"> --}}

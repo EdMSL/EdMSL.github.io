@@ -72,7 +72,12 @@
   transition: all 0.3s linear;
 
   & svg {
+    transition: 0.3s;
     fill: var(--text-main-color);
+  }
+
+  &:hover svg {
+    fill: var(--main-theme-color);
   }
 
   @media (min-width: $tablet-width) {
@@ -219,7 +224,7 @@
 
   &:hover,
   &:focus {
-    color: $purple;
+    color: var(--main-theme-color);
   }
 
   &--active {
