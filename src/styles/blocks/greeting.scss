@@ -6,10 +6,11 @@
   align-items: center;
   min-height: 100vh;
 
+  color: $default-dark;
+
   background-color: $gray;
   background-image: var(--bg-image);
   background-size: cover;
-  // background-image: linear-gradient(to top, $orange, var(--main-theme-color));
 }
 
 .greeting__container {
@@ -58,12 +59,12 @@
   display: inline-block;
   padding: 10px 20px;
 
-  color: var(--text-main-color);
+  color: $default-dark;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
 
-  border: 2px solid var(--text-main-color);
+  border: 2px solid $default-dark;
   border-radius: 20px;
 
   transition: 0.3s;
