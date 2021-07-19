@@ -47,7 +47,7 @@
   width: 100%;
   margin: 0 auto;
 
-  .game__card:hover & {
+  .game__image-block:hover & {
     outline: 2px solid var(--main-theme-color);
     outline-offset: -2px;
   }
@@ -62,7 +62,7 @@
   width: 100%;
   height: 100%;
 
-  .game__card:hover & {
+  .game__image-block:hover & {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,7 +100,7 @@
 
   cursor: default;
 
-  .game__card:hover & {
+  .game__image-block:hover + & {
     color: var(--main-theme-color);
   }
 }
