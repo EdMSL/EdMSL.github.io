@@ -1,9 +1,16 @@
 <div class="game__card">
   <div class="game__image-block">
-    <a class="game__link" href="games/{{gameNameInHTML}}/index.html" target="_blank">
-      <span class="visually-hidden">Страница игры {{gameName}}</span>
-      <img class="game__image" src="images/content/{{gameName}}.jpg" alt="Обложка игры {{gameName}}" width="300" height="auto">
-    </a>
+    <img class="game__image" src="images/content/{{gameName}}.jpg" alt="Обложка игры {{gameName}}" width="300" height="auto">
+    <div class="game__links-block">
+      <a class="game__link" href="games/{{gameNameInHTML}}/index.html" target="_blank">
+        <span class="visually-hidden">Страница игры {{gameName}}</span>
+        <span class="game__play">Играть</span>
+      </a>
+      <a class="game__link" href="https://github.com/EdMSL/{{gameOnGitHub}}" target="_blank">
+        <span class="visually-hidden">Страница игры {{gameName}} на GitHub</span>
+        <span class="game__code">Посмотреть на GitHub</span>
+      </a>
+    </div>
   </div>
-  <a class="game__description" href="games/{{gameNameInHTML}}/index.html" target="_blank">{{gameName}}</a>
+  <span class="game__name">{{gameName}}</span>
 </div>

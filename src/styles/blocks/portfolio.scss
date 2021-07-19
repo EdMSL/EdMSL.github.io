@@ -32,13 +32,15 @@
 }
 
 .game__card {
+  transition: 0.3s;
+
   @media (min-width: $tablet-width) {
     width: 100%;
   }
 }
 
-.game__link {
-  display: block;
+.game__image-block {
+  position: relative;
 }
 
 .game__image {
@@ -51,12 +53,52 @@
   }
 }
 
-.game__description {
+.game__links-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  .game__card:hover & {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.75);
+  }
+}
+
+.game__link {
+  margin-bottom: 20px;
+  padding: 8px 14px;
+
+  color: $default-light;
+  font-size: 20px;
+
+  border: 2px solid $default-light;
+  border-radius: 20px;
+
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--main-theme-color);
+
+    border: 2px solid var(--main-theme-color);
+  }
+}
+
+.game__name {
   color: var(--text-main-color);
   font-size: 20px;
   line-height: 45px;
   font-weight: 700;
   text-transform: uppercase;
+
+  cursor: default;
 
   .game__card:hover & {
     color: var(--main-theme-color);

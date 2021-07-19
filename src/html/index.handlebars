@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="msapplication-TileColor" content="#2d89ef">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="preload" href="fonts/opensans.woff" as="font">
-    <link rel="preload" href="fonts/opensans.woff2" as="font">
-    <link rel="preload" href="fonts/opensanslight.woff" as="font">
-    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
-    <link rel="preload" href="fonts/opensansbold.woff" as="font">
-    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
-    <title>Portfolio site</title>
-    {{#if (isdefined htmlWebpackPlugin.options.inject)}}<link rel="stylesheet" href="css/styles.css">{{/if}}
-  </head>
 
-  <body>
-    <div class="body-wrap">
-      {{> partials/header title=htmlWebpackPlugin.options.title}}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="preload" href="fonts/opensans.woff" as="font">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+  <title>Portfolio site</title>
+  {{#if (isdefined htmlWebpackPlugin.options.inject)}}
+  <link rel="stylesheet" href="css/styles.css">{{/if}}
+</head>
 
-      <main class="main">
-        {{> partials/greeting}}
+<body>
+  <div class="body-wrap">
+    {{> partials/header title=htmlWebpackPlugin.options.title}}
 
-        <section class="portfolio">
-          <h2 class="visually-hidden" id="portfolio">Портфолио</h2>
-          <div class="games__container">
-            <div class="games__items">
-              {{> partials/gameCard gameName="Block Breaker" gameNameInHTML="BlockBreaker"}}
-              {{> partials/gameCard gameName="Feed the Animals" gameNameInHTML="FeedTheAnimals"}}
-              {{> partials/gameCard gameName="Sumo Battle" gameNameInHTML="SumoBattle"}}
-              {{> partials/gameCard gameName="Space Defender" gameNameInHTML="SpaceDefender"}}
-              {{> partials/gameCard gameName="Tilevania" gameNameInHTML="Tilevania"}}
-            </div>
+    <main class="main">
+      {{> partials/greeting}}
+
+      <section class="portfolio">
+        <h2 class="visually-hidden" id="portfolio">Портфолио</h2>
+        <div class="games__container">
+          <div class="games__items">
+            {{> partials/gameCard gameName="Block Breaker" gameNameInHTML="BlockBreaker" gameOnGitHub="block-breaker"}}
+            {{> partials/gameCard gameName="Feed the Animals" gameNameInHTML="FeedTheAnimals"
+            gameOnGitHub="feed-the-animals"}}
+            {{> partials/gameCard gameName="Sumo Battle" gameNameInHTML="SumoBattle" gameOnGitHub="sumo-battle"}}
+            {{> partials/gameCard gameName="Space Defender" gameNameInHTML="SpaceDefender"
+            gameOnGitHub="space-defender"}}
+            {{> partials/gameCard gameName="Tilevania" gameNameInHTML="Tilevania" gameOnGitHub="tilevania"}}
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
 
-      {{> partials/footer title="Контакты"}}
-    </div>
-    {{#if (isdefined htmlWebpackPlugin.options.inject)}}<script src="js/index.js"></script>{{/if}}
-  </body>
+    {{> partials/footer title="Контакты"}}
+  </div>
+  {{#if (isdefined htmlWebpackPlugin.options.inject)}}
+  <script src="js/index.js"></script>{{/if}}
+</body>
+
 </html>
