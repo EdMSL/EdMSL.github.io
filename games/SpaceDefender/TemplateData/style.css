@@ -11,6 +11,6 @@ body { padding: 0; margin: 0 }
 #unity-footer { position: relative }
 .unity-mobile #unity-footer { display: none }
 #unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
-#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px; color: inherit; text-decoration: none; }
 #unity-build-title a { color: inherit; text-decoration: none; }
 #unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
