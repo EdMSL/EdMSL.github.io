@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Space Age";
+  src: url("./spaceage.ttf");
+}
+
+body {
+  padding: 0;
+  margin: 0
+}
+
+/* #unity-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+#unity-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#unity-canvas {
+  width: 100%;
+  height: 100%;
+  background: #231f20
+}
+
+#unity-loading-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* transform: translate(-50%, -50%); */
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#unity-logo {
+  width: 100%;
+  /* height: 60px; */
+  background-size: contain;
+  color: #29abfa;
+  /* color: #b95f33; */
+  font-size: 3em;
+  text-align: center;
+  font-family: 'Space Age', 'Courier New', Courier, monospace;
+}
+
+#unity-progress-bar-empty {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  max-width: 400px;
+  height: 24px;
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+#unity-progress-bar-full {
+  width: 0%;
+  height: 100%;
+  box-sizing: inherit;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+  background-color: #007cff;
+  /* background-color: #f25c11; */
+}
+
+#unity-warning {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%);
+  background: white;
+  padding: 10px;
+  display: none
+}
