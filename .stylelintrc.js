@@ -35,7 +35,6 @@ module.exports = {
     'declaration-no-important': true,
     'font-family-name-quotes': 'always-unless-keyword',
     'font-weight-notation': 'numeric',
-    'function-calc-no-invalid': true,
     'function-url-no-scheme-relative': true,
     'function-url-quotes': 'always',
     'max-line-length': 80,
@@ -62,6 +61,7 @@ module.exports = {
     'rule-empty-line-before': ['always', { // --fix
       'ignore': ['first-nested'],
     }],
+    'selector-class-pattern': null,
     'selector-max-compound-selectors': 2,
     'selector-max-universal': 1,
     'value-keyword-case': 'lower', // --fix
