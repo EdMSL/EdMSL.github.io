@@ -8,7 +8,6 @@
   const header = document.querySelector('.header');
 
   const anchors = document.querySelectorAll('a[href*="#"]');
-  const anchorsBlocksCoords = {};
   const headerBottomCoord = header.getBoundingClientRect().bottom + window.scrollY;
 
   themeToggler.addEventListener('click', function (evt) {
@@ -52,10 +51,6 @@
         block: 'start',
       });
     });
-
-    // var anchorBlock = document.getElementById(anchorName);
-
-    // anchorsBlocksCoords[anchorName] = anchorBlock.getBoundingClientRect().bottom + window.scrollY;
   }
 
   header.classList.remove('header--open');
