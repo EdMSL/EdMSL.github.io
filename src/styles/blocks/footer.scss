@@ -41,16 +41,15 @@
 
   margin-left: 30px;
 
+  &:hover svg,
+  &:focus svg {
+    fill: var(--main-theme-color);
+  }
 
   & svg {
     transition: 0.3s;
 
     fill: var(--text-main-color);
-  }
-
-  &:hover svg,
-  &:focus svg {
-    fill: var(--main-theme-color);
   }
 
   @media (min-width: $tablet-width) {
@@ -77,6 +76,8 @@
   font-weight: 700;
 }
 
+/* stylelint-disable */
 .credits > input[type="checkbox"]:checked + .credits__block {
   display: block;
 }
+/* stylelint-enable */

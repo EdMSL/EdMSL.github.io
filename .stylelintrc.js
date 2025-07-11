@@ -10,6 +10,7 @@ module.exports = {
     'build/**/*'
   ],
   rules: {
+    'alpha-value-notation': 'number',
     'at-rule-no-unknown': [true, {
       ignoreAtRules: [
         /mixin/,
@@ -25,6 +26,7 @@ module.exports = {
     'color-named': ['never', {
       'message': 'No named (web) colors.',
     }],
+    'color-function-notation': 'legacy',
     'comment-no-empty': [true, {
       'message': 'No empty comment',
     }],
@@ -32,6 +34,7 @@ module.exports = {
     'declaration-empty-line-before': ['never', { // --fix
       'ignore': ['after-comment', 'after-declaration'],
     }],
+    'declaration-block-no-redundant-longhand-properties': null,
     'declaration-no-important': true,
     'font-family-name-quotes': 'always-unless-keyword',
     'font-weight-notation': 'numeric',
@@ -46,6 +49,7 @@ module.exports = {
       'ignoreUnits': /^(?!px).*$/,
       'message': 'Value in px mast be integer number.',
     }],
+    'no-descending-specificity': null,
     'no-unknown-animations': true,
     'property-no-vendor-prefix': [true, {
       'message': 'Not needed with autoprefixer',

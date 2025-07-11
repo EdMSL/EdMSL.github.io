@@ -71,13 +71,13 @@
 
   transition: all 0.3s linear;
 
+  &:hover svg {
+    fill: var(--main-theme-color);
+  }
+
   & svg {
     transition: 0.3s;
     fill: var(--text-main-color);
-  }
-
-  &:hover svg {
-    fill: var(--main-theme-color);
   }
 
   @media (min-width: $tablet-width) {
@@ -143,7 +143,9 @@
     height: 4px;
 
     background-color: var(--text-main-color);
-    box-shadow: 0 7px 0 0 var(--text-main-color), 0 14px 0 0 var(--text-main-color);
+    box-shadow:
+      0 7px 0 0 var(--text-main-color),
+      0 14px 0 0 var(--text-main-color);
   }
 
   .header--open &::before,
@@ -200,12 +202,13 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    & {
-      margin-right: 50px;
-    }
 
     &:last-child {
       margin-right: 0;
+    }
+
+    & {
+      margin-right: 50px;
     }
   }
 }
